@@ -6,6 +6,9 @@ fn main() { //fn  to say this is a function
     second_var=50 ;
     println!("Hello, world! \n this is x {} and y is {}",first_var,second_var);
     let c = first_var as f64 /floating_var;  //castin  int to float
-    println!(" {} ", c);
+    println!(" {} ", c);// using  default  format
+    println!(" {:08.3} ", c); //3 digit of precision, totale of 8 caractere 
+    print!(" {0:08.3}  not  {1}", c,first_var); //ln for  new line every var  has  position starting  from 0 using this position you can prin t it many tima in ssame line 
+
 
 }
