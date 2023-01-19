@@ -43,10 +43,29 @@ fn main() { //fn  to say this is a function
 
     println!("{}  {}  {}",a,b,c);
     say_hello(1,'c');
+    let x =square (2);
+    println!("{}",x);
+    let y = square2(3);
+    println!("{:?}",y); //this how to print tuples 
 
 }
 
 fn say_hello( number : i32 , name :char)// var : type
 {
     println!("hello {} {}",name,number);
+}
+
+
+fn square (x : i32)-> i32   //-> i32 for return value  
+{
+    x*x  //make it express mean no ; so th value pass as retun value 
+    //return x*x ; other way 
+
+}
+
+fn square2 (x : i32)-> (i32,i32)   //return 2value 
+{
+    
+    return (x,x*x );// return 2 val
+
 }
