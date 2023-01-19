@@ -32,7 +32,16 @@ fn main() { //fn  to say this is a function
     println!("{}",twodim_array[0][1]);
 
     //tuple
+    let stuff =('a',1,13.54);// can be diff  tye of element 
 
+    println!("{}",stuff.0); //print first element  stuff.1 1st .....
+    let mut  stuff2 =('a',1, 13.54);// can be diff  tye of element 
+    stuff2.0 ='c';
+ 
+
+    let(a,b,c) =stuff2; // a= 'a' , b=1 c= 13.54 
+
+    println!("{}  {}  {}",a,b,c);
 
 }
 
