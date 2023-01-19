@@ -12,5 +12,13 @@ fn main() { //fn  to say this is a function
     let _first_char = 'a';//create caractere 
     let  finger = '\u{261D}';// use  symbole
     println!("{}",finger);
+    //array
+
+    let first_array =['a','b','c'];
+    println!("{}",first_array[0]);
+
+    let mut first_array =['a','b','c'];//now we can change element of array
+    first_array[0]= 'x';
+    println!("{}",first_array[0]);
 
 }
