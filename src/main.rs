@@ -20,5 +20,11 @@ fn main() { //fn  to say this is a function
     let mut first_array =['a','b','c'];//now we can change element of array
     first_array[0]= 'x';
     println!("{}",first_array[0]);
-
+   
+    let second_array: [i32 ;5] ; //array of 5 integer 32int
+   // second_array = [1,2,3,4,5] ; //init the array 
+    second_array =[0;5]; // init it with number from 0 to 4
+    let length = second_array.len();//get the array length 
+    println!("{}",length);
 }
+
