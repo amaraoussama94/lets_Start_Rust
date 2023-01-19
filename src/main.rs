@@ -26,5 +26,13 @@ fn main() { //fn  to say this is a function
     second_array =[0;5]; // init it with number from 0 to 4
     let length = second_array.len();//get the array length 
     println!("{}",length);
+
+    let twodim_array=[[1,2,3],
+                [4,5,6]]; //array of 5 integer 32int
+    println!("{}",twodim_array[0][1]);
+
+    //tuple
+
+
 }
 
