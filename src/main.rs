@@ -42,6 +42,11 @@ fn main() { //fn  to say this is a function
     let(a,b,c) =stuff2; // a= 'a' , b=1 c= 13.54 
 
     println!("{}  {}  {}",a,b,c);
+    say_hello(1,'c');
 
 }
 
+fn say_hello( number : i32 , name :char)// var : type
+{
+    println!("hello {} {}",name,number);
+}
