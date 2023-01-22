@@ -98,6 +98,18 @@ while i < first_array.len()
     i += 1;
 }
 
+//for loop
+//for item in first_array 
+for (index,item)in first_array .iter().enumerate()//iterator  //.iter().enumerate() to return a tule of  index and elemnt 
+{
+    println!("for loop ;{}  in postion {}",item,index);
+}
+
+for i in 0..5
+{
+    println!(" hello num {}",i);
+}
+
 }
 
 
