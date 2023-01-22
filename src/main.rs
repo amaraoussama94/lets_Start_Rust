@@ -82,6 +82,21 @@ fn main() { //fn  to say this is a function
             break count;//end loop //return count  when the loop end
         } */
 println!(" result = {}",result);
+//while loops
+let mut var_count =0;
+while var_count < 10 
+{
+    var_count += 1;
+    println!(" {}",var_count);
+}
+
+let mut i =0;
+while i < first_array.len()
+{
+    
+    println!("first_array ;{}",first_array[i]);
+    i += 1;
+}
 
 }
 
