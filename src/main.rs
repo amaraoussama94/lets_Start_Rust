@@ -49,7 +49,7 @@ fn main() { //fn  to say this is a function
     println!("{:?}",y); //this how to print tuples 
 
     //if cond 
-    if (first_var == 10)
+    if first_var == 10
     {
         println!(" first  condition ");
     }
@@ -61,8 +61,30 @@ fn main() { //fn  to say this is a function
     let condition  = true ; 
     let rust_var = if condition {5} else {256};
     println!("{}" , rust_var) ;
+    // loops 
+    //infinit 
+    let mut count =0;
+
+    let result =loop {   //assign the return value aka count  to result 
+        count +=1;
+        println!(" count value is {}",count);
+        if count > 20 
+        {
+            break count;//end loop //return count  when the loop end
+        }
+        }; // need ;  as its an expression not statement 
+
+        /*loop {   //assign the return value aka count  to result 
+        count +=1;
+        println!(" count value is {}",count);
+        if count > 20 
+        {
+            break count;//end loop //return count  when the loop end
+        } */
+println!(" result = {}",result);
 
 }
+
 
 fn say_hello( number : i32 , name :char)// var : type
 {
