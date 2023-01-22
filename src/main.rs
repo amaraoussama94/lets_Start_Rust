@@ -57,6 +57,10 @@ fn main() { //fn  to say this is a function
     {
         println!(" second  condition ");
     }
+    //condition assignement
+    let condition  = true ; 
+    let rust_var = if condition {5} else {256};
+    println!("{}" , rust_var) ;
 
 }
 
