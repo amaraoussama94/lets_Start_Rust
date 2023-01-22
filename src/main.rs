@@ -48,6 +48,16 @@ fn main() { //fn  to say this is a function
     let y = square2(3);
     println!("{:?}",y); //this how to print tuples 
 
+    //if cond 
+    if (first_var == 10)
+    {
+        println!(" first  condition ");
+    }
+    else  //elswe if ()
+    {
+        println!(" second  condition ");
+    }
+
 }
 
 fn say_hello( number : i32 , name :char)// var : type
