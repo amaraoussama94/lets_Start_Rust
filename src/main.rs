@@ -109,6 +109,11 @@ for i in 0..5
 {
     println!(" hello num {}",i);
 }
+//shadowing var 
+let planet =" earth";
+println!(" the planet is {}",planet);
+let planet =" march";
+println!(" the planet is {}",planet);
 
 }
 
