@@ -128,9 +128,14 @@ let mut message = String::from("earth");//dinamicly create string
 println!("   {}",message);
 message.push_str("  is home");// add new  word to the  string 
 println!("   {}",message);
+//passing by reference 
+print_palnet(&message  );
 }
-
-
+//passing by refference not a coy or change ownership
+fn print_palnet(name :&String )
+{
+    println!("the planet is {} ",name);
+}
 fn say_hello( number : i32 , name :char)// var : type
 {
     println!("hello {} {}",name,number);
