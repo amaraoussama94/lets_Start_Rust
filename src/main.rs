@@ -122,6 +122,12 @@ println!(" the planet is {}",planet);
     println!(" the planet is {}",planet);
 }
 println!(" the planet is {}",planet);
+
+//string 
+let mut message = String::from("earth");//dinamicly create string 
+println!("   {}",message);
+message.push_str("  is home");// add new  word to the  string 
+println!("   {}",message);
 }
 
 
