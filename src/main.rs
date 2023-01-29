@@ -130,11 +130,44 @@ message.push_str("  is home");// add new  word to the  string
 println!("   {}",message);
 //passing by reference 
 print_palnet(&message  );
+//mut reference 
+//print_palnet(&mut message  );
+
+//slice 
+let msg = " hello from planet earth";
+let last= &msg[18..23];//[18..] to last index
+println!(" last word is{}",last);
 }
+//return string with no space if it si there one 
+fn tim (name :&str) -> &str{
+    let mut start =0;
+    for (index,character) in name.chars().enumerate()
+    {
+        if character!=' '
+        {
+            start =index;
+            break;
+        }
+    }
+//search in revzes to find last space 
+    let mut end =0;
+    for (index,character) in name.chars().rev().enumerate()
+    {
+        if character!=' '
+        {
+            end  =name.len()-index;
+            break;
+        }
+    }
+  &name[start..end]
+}
+
+
 //passing by refference not a coy or change ownership
-fn print_palnet(name :&String )
+fn print_palnet(name :&String )//fn print_palnet(name :&mut String ) //mutb refence so we can change passing value 
 {
     println!("the planet is {} ",name);
+   // name.push_str("  hello");// add new  word to the  string 
 }
 fn say_hello( number : i32 , name :char)// var : type
 {
