@@ -115,6 +115,13 @@ println!(" the planet is {}",planet);
 let planet =" march";
 println!(" the planet is {}",planet);
 
+//var sco and  shadowing 
+
+{
+    let mut planet ="jupiter";
+    println!(" the planet is {}",planet);
+}
+println!(" the planet is {}",planet);
 }
 
 
