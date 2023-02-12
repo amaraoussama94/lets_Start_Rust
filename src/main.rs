@@ -1,6 +1,6 @@
 
 
-use std::io;//include the input/output lib  needed ti get inut from th user 
+use std::io;//include the input/output lib  needed ti get inut from th user  std  generale lib , io part of it
 
 
 fn main() { //fn  to say this is a function
@@ -158,6 +158,8 @@ let   number = data1.trim().parse::<i32>();//trim to  deelet any white space and
 //or 
 let   number: i32 = data1.trim().parse().unwrap();//trim to  deelet any white space and \n to use only digit 
 println!(" the number +1 is{}",number+1);
+//crate 
+//visit crates.io
 }
 //return string with no space if it si there one 
 fn tim (name :&str) -> &str{
