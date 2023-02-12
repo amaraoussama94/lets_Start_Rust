@@ -152,6 +152,12 @@ io::stdin().read_line(&mut data1);//to get  a line of inut from user , mut ref t
 
 println!(" the message is {}",data1);
 
+//parse string mean convert it 
+let   number = data1.trim().parse::<i32>();//trim to  deelet any white space and \n , using turbo fish method 
+
+//or 
+let   number: i32 = data1.trim().parse().unwrap();//trim to  deelet any white space and \n to use only digit 
+println!(" the number +1 is{}",number+1);
 }
 //return string with no space if it si there one 
 fn tim (name :&str) -> &str{
