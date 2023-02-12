@@ -1,3 +1,8 @@
+
+
+use std::io;//include the input/output lib  needed ti get inut from th user 
+
+
 fn main() { //fn  to say this is a function
     let  first_var = 10;// let  to declare any tupe of var as const can t be change
     let mut second_var =30 ; //var not const  value can change in the code , : i32 mean a 32 bit  signeed  int  or u  for unsigned  8 16 32 ..
@@ -137,6 +142,16 @@ print_palnet(&message  );
 let msg = " hello from planet earth";
 let last= &msg[18..23];//[18..] to last index
 println!(" last word is{}",last);
+
+//stander input
+
+let mut  data1 = String::new(); //create new  empty string buffer 
+println!("tape message :");
+//io::stdin()à//create new handel to acces  in strem
+io::stdin().read_line(&mut data1);//to get  a line of inut from user , mut ref to make data get the user value wich is a string
+
+println!(" the message is {}",data1);
+
 }
 //return string with no space if it si there one 
 fn tim (name :&str) -> &str{
