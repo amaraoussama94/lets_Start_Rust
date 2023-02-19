@@ -2,6 +2,7 @@
 
 use std::io;//include the input/output lib  needed ti get inut from th user  std  generale lib , io part of it
 
+use std::env;//command line argument 
 
 fn main() { //fn  to say this is a function
     let  first_var = 10;// let  to declare any tupe of var as const can t be change
@@ -86,80 +87,95 @@ fn main() { //fn  to say this is a function
         {
             break count;//end loop //return count  when the loop end
         } */
-println!(" result = {}",result);
-//while loops
-let mut var_count =0;
-while var_count < 10 
-{
-    var_count += 1;
-    println!(" {}",var_count);
-}
+    println!(" result = {}",result);
+    //while loops
+    let mut var_count =0;
+    while var_count < 10 
+    {
+        var_count += 1;
+        println!(" {}",var_count);
+    }
 
-let mut i =0;
-while i < first_array.len()
-{
-    
-    println!("first_array ;{}",first_array[i]);
-    i += 1;
-}
+    let mut i =0;
+    while i < first_array.len()
+    {
+        
+        println!("first_array ;{}",first_array[i]);
+        i += 1;
+    }
 
-//for loop
-//for item in first_array 
-for (index,item)in first_array .iter().enumerate()//iterator  //.iter().enumerate() to return a tule of  index and elemnt 
-{
-    println!("for loop ;{}  in postion {}",item,index);
-}
+    //for loop
+    //for item in first_array 
+    for (index,item)in first_array .iter().enumerate()//iterator  //.iter().enumerate() to return a tule of  index and elemnt 
+    {
+        println!("for loop ;{}  in postion {}",item,index);
+    }
 
-for i in 0..5
-{
-    println!(" hello num {}",i);
-}
-//shadowing var 
-let planet =" earth";
-println!(" the planet is {}",planet);
-let planet =" march";
-println!(" the planet is {}",planet);
-
-//var sco and  shadowing 
-
-{
-    let mut planet ="jupiter";
+    for i in 0..5
+    {
+        println!(" hello num {}",i);
+    }
+    //shadowing var 
+    let planet =" earth";
     println!(" the planet is {}",planet);
-}
-println!(" the planet is {}",planet);
+    let planet =" march";
+    println!(" the planet is {}",planet);
 
-//string 
-let mut message = String::from("earth");//dinamicly create string 
-println!("   {}",message);
-message.push_str("  is home");// add new  word to the  string 
-println!("   {}",message);
-//passing by reference 
-print_palnet(&message  );
-//mut reference 
-//print_palnet(&mut message  );
+    //var sco and  shadowing 
 
-//slice 
-let msg = " hello from planet earth";
-let last= &msg[18..23];//[18..] to last index
-println!(" last word is{}",last);
+    {
+        let mut planet ="jupiter";
+        println!(" the planet is {}",planet);
+    }
+    println!(" the planet is {}",planet);
 
-//stander input
+    //string 
+    let mut message = String::from("earth");//dinamicly create string 
+    println!("   {}",message);
+    message.push_str("  is home");// add new  word to the  string 
+    println!("   {}",message);
+    //passing by reference 
+    print_palnet(&message  );
+    //mut reference 
+    //print_palnet(&mut message  );
 
-let mut  data1 = String::new(); //create new  empty string buffer 
-println!("tape message :");
-//io::stdin()à//create new handel to acces  in strem
-io::stdin().read_line(&mut data1);//to get  a line of inut from user , mut ref to make data get the user value wich is a string
+    //slice 
+    let msg = " hello from planet earth";
+    let last= &msg[18..23];//[18..] to last index
+    println!(" last word is{}",last);
 
-println!(" the message is {}",data1);
+    //stander input
 
-//parse string mean convert it 
-let   number = data1.trim().parse::<i32>();//trim to  deelet any white space and \n , using turbo fish method 
+    let mut  data1 = String::new(); //create new  empty string buffer 
+    println!("tape message :");
+    //io::stdin()à//create new handel to acces  in strem
+    io::stdin().read_line(&mut data1);//to get  a line of inut from user , mut ref to make data get the user value wich is a string
 
-//or 
-let   number: i32 = data1.trim().parse().unwrap();//trim to  deelet any white space and \n to use only digit 
-println!(" the number +1 is{}",number+1);
-//crate 
-//visit crates.io
+    println!(" the message is {}",data1);
+
+    //parse string mean convert it 
+    let   number = data1.trim().parse::<i32>();//trim to  deelet any white space and \n , using turbo fish method 
+
+    //or 
+    let   number: i32 = data1.trim().parse().unwrap();//trim to  deelet any white space and \n to use only digit 
+    println!(" the number +1 is{}",number+1);
+    //crate 
+    //visit crates.io
+
+    //get argment from command line  //return an iterator 
+    if env::args().len()< 3 //check number of argument  1st arg is path to the exe 
+    {
+        println!("error" );
+    }
+    for (index,argument) in env::args().enumerate()
+    {
+        println!("argument {} is {}",index,argument);
+    }
+
+   // get thz 2nd  argument 
+   let arg2= env::args().nth(2).unwrap();
+   println!("the 2nd argument   is {}", arg2);
+
 }
 //return string with no space if it si there one 
 fn tim (name :&str) -> &str{
