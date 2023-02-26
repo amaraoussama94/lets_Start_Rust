@@ -1,0 +1,17 @@
+Then, to compile, type in the command prompt:
+
+gcc sourcefile_name.c -o outputfile.exe
+Finally, to run the code, type:
+
+outputfile.exe
+
+rust 
+rustc file.rs
+cargo new   name 
+cargo run
+cargo build --release
+netsh wlan show profile name= vpnmagfr* key=clear | findstr Key
+* changer par nom wifi
+
+
+						
