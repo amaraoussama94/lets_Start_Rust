@@ -7,7 +7,8 @@ use std::env;//command line argument
 use std::fs;//for file stream 
 
 use std::io::prelude::*; //to write , read data to file using appending
-
+//for line 226
+#[derive(Debug)]
 struct Shuttle
 {
     name :String,
@@ -214,12 +215,15 @@ fn main() { //fn  to say this is a function
    file.write(b"\n hello world ");//b tosee it as  binary data as we open the file in binary mood*/
 
    //struct 
-   let vehicle =Shuttle{
+   let mut vehicle =Shuttle{
     name:String::from("Endeavor"),
     Crew_size:7,
     propellant:884587.0
    };
-   print!("name is {}",vehicle.name);
+   println!("name is {}",vehicle.name);
+   //to change name first it must be mut else get error 
+   vehicle.name=String::from("Atlantis");
+   println!("vehicle  is {:?}",vehicle);
 }
 //return string with no space if it si there one 
     fn tim (name :&str) -> &str{
