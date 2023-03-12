@@ -29,6 +29,13 @@ impl Shuttle {
     {
         self.propellant +=gallons;
     }
+    //associated function 
+    fn new(name:&str)->Shuttle{
+        Shuttle { name:String::from (name),
+             Crew_size: 7, 
+             propellant:0.0
+            }
+    }
 }
 fn main() { //fn  to say this is a function 
    /*  let  first_var = 10;// let  to declare any tupe of var as const can t be change
