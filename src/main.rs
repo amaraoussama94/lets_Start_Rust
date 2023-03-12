@@ -259,6 +259,9 @@ fn main() { //fn  to say this is a function
    println!("vehicle  is {}",name_v);
    vehicle.add_fuel(1280.0);
    println!("vehicle  is {:?}",vehicle);
+   //create new  vehicle 
+   let mut vehicle3= Shuttle::new("KIA");
+   println!("vehicle  is {:?}",vehicle3);
 }
 
 /* 
