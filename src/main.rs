@@ -257,7 +257,7 @@ fn main() { //fn  to say this is a function
    //print the name
    let name_v =vehicle.get_name();
    println!("vehicle  is {}",name_v);
-   vehicle.add_fuel(1280);
+   vehicle.add_fuel(1280.0);
    println!("vehicle  is {:?}",vehicle);
 }
 
