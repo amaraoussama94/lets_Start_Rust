@@ -1,5 +1,5 @@
 
-
+/* 
 use std::io;//include the input/output lib  needed ti get inut from th user  std  generale lib , io part of it
 
 use std::env;//command line argument 
@@ -7,6 +7,7 @@ use std::env;//command line argument
 use std::fs;//for file stream 
 
 use std::io::prelude::*; //to write , read data to file using appending
+*/
 //for line 226
 #[derive(Debug)]
 struct Shuttle
@@ -16,6 +17,7 @@ struct Shuttle
     propellant:f64
 
 }
+
 fn main() { //fn  to say this is a function 
    /*  let  first_var = 10;// let  to declare any tupe of var as const can t be change
     let mut second_var =30 ; //var not const  value can change in the code , : i32 mean a 32 bit  signeed  int  or u  for unsigned  8 16 32 ..
@@ -224,7 +226,16 @@ fn main() { //fn  to say this is a function
    //to change name first it must be mut else get error 
    vehicle.name=String::from("Atlantis");
    println!("vehicle  is {:?}",vehicle);
+   //set the name and get the rest of dta from vehicle one
+   let vehicle2=Shuttle{
+    name:String::from("Tourino"),
+    ..vehicle
+   };
+   println!("vehicle  is {:?}",vehicle2);
+
 }
+
+/* 
 //return string with no space if it si there one 
     fn tim (name :&str) -> &str{
     let mut start =0;
@@ -275,3 +286,4 @@ fn square2 (x : i32)-> (i32,i32)   //return 2value
     return (x,x*x );// return 2 val
 
 }
+*/
