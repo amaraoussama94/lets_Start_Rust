@@ -20,7 +20,16 @@ struct Shuttle
     propellant:f64
 
 }
-
+//add som methode to the struct 
+impl Shuttle {
+    fn get_name(&self)->&str{
+        &self.name//return a slice of string
+    }
+    fn add_fuel(&mut self,gallons:f64)
+    {
+        self.propellant +=gallons;
+    }
+}
 fn main() { //fn  to say this is a function 
    /*  let  first_var = 10;// let  to declare any tupe of var as const can t be change
     let mut second_var =30 ; //var not const  value can change in the code , : i32 mean a 32 bit  signeed  int  or u  for unsigned  8 16 32 ..
@@ -238,7 +247,11 @@ fn main() { //fn  to say this is a function
    vehicle.Crew_size=6;
    println!("vehicle  is {:?}",vehicle);
    println!("vehicle  is {:?}",vehicle2);
-
+   //print the name
+   let name_v =vehicle.get_name();
+   println!("vehicle  is {}",name_v);
+   vehicle.add_fuel(1280);
+   println!("vehicle  is {:?}",vehicle);
 }
 
 /* 
