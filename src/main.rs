@@ -1,3 +1,5 @@
+use std::clone;
+
 
 /* 
 use std::io;//include the input/output lib  needed ti get inut from th user  std  generale lib , io part of it
@@ -8,8 +10,9 @@ use std::fs;//for file stream
 
 use std::io::prelude::*; //to write , read data to file using appending
 */
-//for line 226
+//for line 226 drive something to the struct 
 #[derive(Debug)]
+#[derive(Clone)]
 struct Shuttle
 {
     name :String,
@@ -225,12 +228,15 @@ fn main() { //fn  to say this is a function
    println!("name is {}",vehicle.name);
    //to change name first it must be mut else get error 
    vehicle.name=String::from("Atlantis");
-   println!("vehicle  is {:?}",vehicle);
+   
    //set the name and get the rest of dta from vehicle one
    let vehicle2=Shuttle{
-    name:String::from("Tourino"),
-    ..vehicle
+    /*name:String::from("Tourino"),
+    ..vehicle //can t derive the string name */
+    ..vehicle.clone()
    };
+   vehicle.Crew_size=6;
+   println!("vehicle  is {:?}",vehicle);
    println!("vehicle  is {:?}",vehicle2);
 
 }
