@@ -7,8 +7,16 @@ use std::env;//command line argument
 use std::fs;//for file stream 
 
 use std::io::prelude::*; //to write , read data to file using appending
-fn main() { //fn  to say this is a function
-    let  first_var = 10;// let  to declare any tupe of var as const can t be change
+
+struct Shuttle
+{
+    name :String,
+    Crew_size:u8,
+    propellant:f64
+
+}
+fn main() { //fn  to say this is a function 
+   /*  let  first_var = 10;// let  to declare any tupe of var as const can t be change
     let mut second_var =30 ; //var not const  value can change in the code , : i32 mean a 32 bit  signeed  int  or u  for unsigned  8 16 32 ..
     let floating_var : f64 =127.257; //64 or 32
     println!("Hello, world! \n this is x {} and y is {} and float is {}",first_var,second_var,floating_var); // {} place holder to print the value of x 
@@ -203,9 +211,15 @@ fn main() { //fn  to say this is a function
 
    //update file not overwrite it 
    let mut file =fs::OpenOptions::new().append(true).open("c++_c.txt").unwrap();
-   file.write(b"\n hello world ");//b tosee it as  binary data as we open the file in binary mood
+   file.write(b"\n hello world ");//b tosee it as  binary data as we open the file in binary mood*/
 
-
+   //struct 
+   let vehicle =Shuttle{
+    name:String::from("Endeavor"),
+    Crew_size:7,
+    propellant:884587.0
+   };
+   print!("name is {}",vehicle.name);
 }
 //return string with no space if it si there one 
     fn tim (name :&str) -> &str{
