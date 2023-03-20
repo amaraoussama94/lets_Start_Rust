@@ -1,4 +1,4 @@
-use std::clone;
+//use std::clone;
 
 
 /* 
@@ -10,9 +10,9 @@ use std::fs;//for file stream
 
 use std::io::prelude::*; //to write , read data to file using appending
 
-//for line 226 drive something to the struct */
+//for line 226 drive something to the struct 
 #[derive(Debug)]
-/*#[derive(Clone)]
+#[derive(Clone)]
 struct Shuttle
 {
     name :String,
@@ -36,7 +36,7 @@ impl Shuttle {
              propellant:0.0
             }
     }
-}*/
+}
 
 //tuple struct 
 struct Color(u8,u8,u8);//TGB
@@ -64,7 +64,20 @@ impl  Rectangle<u8,u8>{
     fn get_perimeter(&self)->u8{
         2*self.width + 2*self.hight //bec&us e we  don t know the type of with  
     }
+}*/
+
+//generic function 
+fn get_biggest<T: std::cmp::PartialOrd> (a:T,b:T)->T{
+    if a > b{
+        a
+    }else {
+     b
+    }
+        
+
 }
+
+
 fn main() { //fn  to say this is a function 
    /*  let  first_var = 10;// let  to declare any tupe of var as const can t be change
     let mut second_var =30 ; //var not const  value can change in the code , : i32 mean a 32 bit  signeed  int  or u  for unsigned  8 16 32 ..
@@ -289,7 +302,7 @@ fn main() { //fn  to say this is a function
    println!("vehicle  is {:?}",vehicle);
    //create new  vehicle 
    let mut vehicle3= Shuttle::new("KIA");
-   println!("vehicle  is {:?}",vehicle3);*/
+   println!("vehicle  is {:?}",vehicle3);
 
    //tuple struct  
   let red = Color(255,0,0) ;
@@ -304,7 +317,10 @@ fn main() { //fn  to say this is a function
   };
   println!("rect is {:?}",rect);
   println!("rect width is {}",rect.get_width());
-  println!("rect peri is {}",rect.get_perimeter());
+  println!("rect peri is {}",rect.get_perimeter());*/
+
+  //generic function
+  println!("th biggest is  {}",get_biggest(1,2 )); 
 }
 
 /* 
