@@ -39,7 +39,12 @@ impl Shuttle {
 }*/
 
 //tuple struct 
-struct color(u8,u8,u8);//TGB
+struct Color(u8,u8,u8);//TGB
+struct Point(u8,u8,u8);
+fn get_y(p:Point)->u8
+{
+    p.1
+}
 fn main() { //fn  to say this is a function 
    /*  let  first_var = 10;// let  to declare any tupe of var as const can t be change
     let mut second_var =30 ; //var not const  value can change in the code , : i32 mean a 32 bit  signeed  int  or u  for unsigned  8 16 32 ..
@@ -267,8 +272,10 @@ fn main() { //fn  to say this is a function
    println!("vehicle  is {:?}",vehicle3);*/
 
    //tuple struct  
-  let red = color(255,0,0) ;
+  let red = Color(255,0,0) ;
   println!("1st element   is { }",red.0);
+  let Coord = Point(0,1,3) ;
+  println!("coord y    is { }",get_y(Coord));
 }
 
 /* 
