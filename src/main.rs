@@ -309,12 +309,10 @@ fn main() { //fn  to say this is a function
    println!("vehicle  is {}",name_v);
    vehicle.add_fuel(1280.0); 
    println!("vehicle  is {:?}",vehicle);
-   //create new  vehicle */
-   let mut vehicle3= Shuttle{name:String::from("Endeavor"),
-   Crew_size:7,
-   propellant:884587.0};
-   println!("vehicle  is { }",vehicle3.describe());
-/* 
+   //create new  vehicle 
+   let mut vehicle3= Shuttle::new("KIA");
+   println!("vehicle  is {:?}",vehicle3);
+
    //tuple struct  
   let red = Color(255,0,0) ;
   println!("1st element   is { }",red.0);
@@ -333,7 +331,10 @@ fn main() { //fn  to say this is a function
   //generic function
   println!("th biggest is  {}",get_biggest(1,2 )); */
 //Trait 
-   
+let mut vehicle3= Shuttle{name:String::from("Endeavor"),
+Crew_size:7,
+propellant:884587.0};
+println!("vehicle  is { }",vehicle3.describe());
 }
 
 /* 
