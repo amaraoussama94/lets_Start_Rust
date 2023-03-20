@@ -45,12 +45,26 @@ fn get_y(p:Point)->u8
 {
     p.1
 }
-#[derive(Debug)]
-struct Rectangle<T> {
-    hight:T,
-    width:T
-}
 //generic struct 
+#[derive(Debug)]
+//struct Rectangle<T> 2 var will have  same type at run time
+struct Rectangle<T,U> {
+    hight:T,
+    width:U
+}
+//Generic method
+impl<T,U> Rectangle<T,U>{
+    fn get_width(&self)->&U{
+        &self.width //bec&us e we  don t know the type of with  
+    }
+}
+
+//spacial methode for u 8 only
+impl  Rectangle<u8,u8>{
+    fn get_perimeter(&self)->u8{
+        2*self.width + 2*self.hight //bec&us e we  don t know the type of with  
+    }
+}
 fn main() { //fn  to say this is a function 
    /*  let  first_var = 10;// let  to declare any tupe of var as const can t be change
     let mut second_var =30 ; //var not const  value can change in the code , : i32 mean a 32 bit  signeed  int  or u  for unsigned  8 16 32 ..
@@ -286,9 +300,11 @@ fn main() { //fn  to say this is a function
   //Generic struct 
   let rect =Rectangle{
     hight:1,
-    width:3
+    width:3 
   };
   println!("rect is {:?}",rect);
+  println!("rect width is {}",rect.get_width());
+  println!("rect peri is {}",rect.get_perimeter());
 }
 
 /* 
