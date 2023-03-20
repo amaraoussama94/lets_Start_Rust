@@ -10,9 +10,9 @@ use std::fs;//for file stream
 
 use std::io::prelude::*; //to write , read data to file using appending
 
-//for line 226 drive something to the struct 
+//for line 226 drive something to the struct */
 #[derive(Debug)]
-#[derive(Clone)]
+/*#[derive(Clone)]
 struct Shuttle
 {
     name :String,
@@ -45,6 +45,12 @@ fn get_y(p:Point)->u8
 {
     p.1
 }
+#[derive(Debug)]
+struct Rectangle<T> {
+    hight:T,
+    width:T
+}
+//generic struct 
 fn main() { //fn  to say this is a function 
    /*  let  first_var = 10;// let  to declare any tupe of var as const can t be change
     let mut second_var =30 ; //var not const  value can change in the code , : i32 mean a 32 bit  signeed  int  or u  for unsigned  8 16 32 ..
@@ -276,6 +282,13 @@ fn main() { //fn  to say this is a function
   println!("1st element   is { }",red.0);
   let Coord = Point(0,1,3) ;
   println!("coord y    is { }",get_y(Coord));
+
+  //Generic struct 
+  let rect =Rectangle{
+    hight:1,
+    width:3
+  };
+  println!("rect is {:?}",rect);
 }
 
 /* 
